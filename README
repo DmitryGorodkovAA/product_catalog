@@ -1,0 +1,29 @@
+Пример файла конфигурации
+    FLASK_ENV=development
+    FLASK_DEBUG=1
+    FLASK_PORT=5001
+    POSTGRES_USER=user
+    POSTGRES_PASSWORD=password
+    POSTGRES_DB=flaskdb
+    POSTGRES_HOST=db
+    POSTGRES_PORT=5432
+    DATABASE_URL=postgresql://user:password@db:5432/flaskdb
+
+Пример запроса для генерации тестовых данных
+url: http://127.0.0.1:5001/dev/gen_test_story
+body:
+{
+    "n_catalogs" : 1,
+    "n_products" : 1,
+    "n_customers": 1,
+    "n_orders" : 1,
+    "n_order_items": 1
+}
+
+Пример запроса для добавления товара в заказ:
+url: http://127.0.0.1:5001/orders/1/items
+body:
+{
+    "product_id" : 27,
+    "quantity" : 2
+}

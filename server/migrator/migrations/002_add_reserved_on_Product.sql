@@ -1,0 +1,1 @@
+ALTER TABLE products ADD reserved INT NOT NULL DEFAULT 0;
